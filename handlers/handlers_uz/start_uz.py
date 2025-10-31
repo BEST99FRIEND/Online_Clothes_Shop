@@ -19,5 +19,6 @@ Bu yerda siz:
 📦 Buyurtma berish juda oson — sizga yoqqan mahsulotni tanlang, o‘lcham va rangni belgilang, va bot sizga tezda yordam beradi!
 
 💬 Boshlash uchun quyidagi menyudan kerakli bo‘limni tanlang 👇'''
-    photo = FSInputFile("image/menu_shop.jpg")
-    await m.answer_photo(photo=photo, caption=text,reply_markup=menu_buttons_kb_uz)
+    photoo = FSInputFile("image/menu_shop.jpg")
+    await m.answer_photo(photo=photoo, caption=text)
+    await m.answer("birini tanlang", reply_markup=menu_buttons_kb_uz)
