@@ -1,5 +1,5 @@
 from aiogram import Router, F
-from aiogram.types import Message
+from aiogram.types import Message, FSInputFile
 
 menu_2_router_en = Router()
 
@@ -11,7 +11,8 @@ async def menu_cap_f_en(m: Message):
         "Available in various colors, brands, and sizes.\n"
         "Choose one and complete your stylish look! 👌"
     )
-    await m.answer(text=text, parse_mode="Markdown")
+    photoo = FSInputFile("image/cap.jpg")
+    await m.answer_photo(photo=photoo ,caption=text)
 
 @menu_2_router_en.message(F.text == "👕 Shirt")
 async def menu_shirt_f_en(m: Message):
@@ -21,7 +22,8 @@ async def menu_shirt_f_en(m: Message):
         "Made from 100% cotton with trendy designs and bright colors!\n"
         "Pick the one that fits your mood! 🛍️"
     )
-    await m.answer(text=text, parse_mode="Markdown")
+    photoo = FSInputFile("image/T-shirt.jpg")
+    await m.answer_photo(photo=photoo ,caption=text)
 
 @menu_2_router_en.message(F.text == "🧥 Jacket")
 async def menu_jacket_f_en(m: Message):
@@ -31,7 +33,8 @@ async def menu_jacket_f_en(m: Message):
         "Perfect for rain, wind, or cold weather.\n"
         "Check out our latest collection 👇"
     )
-    await m.answer(text=text, parse_mode="Markdown")
+    photoo = FSInputFile("image/jacket.jpg")
+    await m.answer_photo(photo=photoo ,caption=text)
 
 @menu_2_router_en.message(F.text == "🤵 Suit")
 async def menu_suit_f_en(m: Message):
@@ -41,7 +44,8 @@ async def menu_suit_f_en(m: Message):
         "Premium fabrics, classic and modern designs.\n"
         "Look sharp and confident ✨"
     )
-    await m.answer(text=text, parse_mode="Markdown")
+    photoo = FSInputFile("image/suit.jpg")
+    await m.answer_photo(photo=photoo ,caption=text)
 
 @menu_2_router_en.message(F.text == "👖 Trousers")
 async def menu_trousers_f_en(m: Message):
@@ -51,7 +55,8 @@ async def menu_trousers_f_en(m: Message):
         "Available in multiple styles, colors, and sizes.\n"
         "Comfort and style combined!"
     )
-    await m.answer(text=text, parse_mode="Markdown")
+    photoo = FSInputFile("image/trousers.jpg")
+    await m.answer_photo(photo=photoo ,caption=text)
 
 @menu_2_router_en.message(F.text == "👟 Shoes")
 async def menu_shoes_f_en(m: Message):
@@ -61,7 +66,8 @@ async def menu_shoes_f_en(m: Message):
         "Sport, casual, or classic — everything you need is here!\n"
         "Step forward with confidence 🚶‍♂️"
     )
-    await m.answer(text=text, parse_mode="Markdown")
+    photoo = FSInputFile("image/shoes.jpg")
+    await m.answer_photo(photo=photoo ,caption=text)
 
 @menu_2_router_en.message(F.text == "👜 Bags")
 async def menu_bags_f_en(m: Message):
@@ -71,7 +77,8 @@ async def menu_bags_f_en(m: Message):
         "Options for men, women, and kids.\n"
         "Combine fashion with functionality 💼"
     )
-    await m.answer(text=text, parse_mode="Markdown")
+    photoo = FSInputFile("image/bags.jpg")
+    await m.answer_photo(photo=photoo ,caption=text)
 
 @menu_2_router_en.message(F.text == "👓 Accessories")
 async def menu_accessories_f_en(m: Message):
@@ -81,4 +88,5 @@ async def menu_accessories_f_en(m: Message):
         "Watches, belts, glasses, and more!\n"
         "Small details make a big difference 💎"
     )
-    await m.answer(text=text, parse_mode="Markdown")
+    photoo = FSInputFile("image/accessories.jpg")
+    await m.answer_photo(photo=photoo ,caption=text)
