@@ -9,8 +9,8 @@ import asyncio
 import logging
 from handlers import ( start_router, start_router_uz,
                        start_router_ru, start_router_en )
-from handlers import ( menu_router_uz, menu_router_ru, menu_router_en )
-from handlers import ( menu_2_router_uz, menu_2_router_ru, menu_2_router_en )
+from routers import setup_routers
+
 import os
 
 dp = Dispatcher()
@@ -18,16 +18,7 @@ bot_token = os.getenv("TOKEN")
 
 async def main():
     bot = Bot(token=bot_token)
-    dp.include_router(start_router)
-    dp.include_router(start_router_uz)
-    dp.include_router(start_router_ru)
-    dp.include_router(start_router_en)
-    dp.include_router(menu_router_uz)
-    dp.include_router(menu_router_ru)
-    dp.include_router(menu_router_en)
-    dp.include_router(menu_2_router_uz)
-    dp.include_router(menu_2_router_ru)
-    dp.include_router(menu_2_router_en)
+    dp.include_router(setup_routers())
     await dp.start_polling(bot)
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
 from aiogram import Router, F
 from aiogram.types import Message,FSInputFile
+from buttons.buttons_ru import counter_inline_keyboard
 
 menu_2_router_ru = Router()
 
@@ -12,7 +13,7 @@ async def menu_cap_f_ru(m: Message):
         "Выберите и подчеркните свой стиль! 👌"
     )
     photoo = FSInputFile("image/cap.jpg")
-    await m.answer_photo(photo=photoo ,caption=text)
+    await m.answer_photo(photo=photoo ,caption=text, reply_markup=counter_inline_keyboard(0))
 
 @menu_2_router_ru.message(F.text == "👕 Футболка")
 async def menu_shirt_f_ru(m: Message):
@@ -23,7 +24,7 @@ async def menu_shirt_f_ru(m: Message):
         "Выберите ту, которая вам по душе! 🛍️"
     )
     photoo = FSInputFile("image/T-shirt.jpg")
-    await m.answer_photo(photo=photoo ,caption=text)
+    await m.answer_photo(photo=photoo ,caption=text, reply_markup=counter_inline_keyboard(0))
 
 @menu_2_router_ru.message(F.text == "🧥 Куртка")
 async def menu_jacket_f_ru(m: Message):
@@ -34,7 +35,7 @@ async def menu_jacket_f_ru(m: Message):
         "Ознакомьтесь с нашей последней коллекцией 👇"
     )
     photoo = FSInputFile("image/jacket.jpg")
-    await m.answer_photo(photo=photoo ,caption=text)
+    await m.answer_photo(photo=photoo ,caption=text, reply_markup=counter_inline_keyboard(0))
 
 @menu_2_router_ru.message(F.text == "🤵 Костюм")
 async def menu_suit_f_ru(m: Message):
@@ -45,7 +46,7 @@ async def menu_suit_f_ru(m: Message):
         "Подчеркните свою элегантность и уверенность ✨"
     )
     photoo = FSInputFile("image/suit.jpg")
-    await m.answer_photo(photo=photoo ,caption=text)
+    await m.answer_photo(photo=photoo ,caption=text, reply_markup=counter_inline_keyboard(0))
 
 @menu_2_router_ru.message(F.text == "👖 Штаны")
 async def menu_trousers_f_ru(m: Message):
@@ -56,7 +57,7 @@ async def menu_trousers_f_ru(m: Message):
         "Комфорт и стиль в одном месте!"
     )
     photoo = FSInputFile("image/trousers.jpg")
-    await m.answer_photo(photo=photoo ,caption=text)
+    await m.answer_photo(photo=photoo ,caption=text, reply_markup=counter_inline_keyboard(0))
 
 @menu_2_router_ru.message(F.text == "👟 Обувь")
 async def menu_shoes_f_ru(m: Message):
@@ -67,7 +68,7 @@ async def menu_shoes_f_ru(m: Message):
         "Сделайте каждый шаг уверенным 🚶‍♂️"
     )
     photoo = FSInputFile("image/shoes.jpg")
-    await m.answer_photo(photo=photoo ,caption=text)
+    await m.answer_photo(photo=photoo ,caption=text, reply_markup=counter_inline_keyboard(0))
 
 @menu_2_router_ru.message(F.text == "👜 Сумки")
 async def menu_bags_f_ru(m: Message):
@@ -78,7 +79,7 @@ async def menu_bags_f_ru(m: Message):
         "Совместите функциональность и моду 💼"
     )
     photoo = FSInputFile("image/bags.jpg")
-    await m.answer_photo(photo=photoo ,caption=text)
+    await m.answer_photo(photo=photoo ,caption=text, reply_markup=counter_inline_keyboard(0))
 
 @menu_2_router_ru.message(F.text == "👓 Аксессуары")
 async def menu_accessories_f_ru(m: Message):
@@ -89,4 +90,4 @@ async def menu_accessories_f_ru(m: Message):
         "Маленькие детали создают большое впечатление 💎"
     )
     photoo = FSInputFile("image/accessories.jpg")
-    await m.answer_photo(photo=photoo ,caption=text)
+    await m.answer_photo(photo=photoo ,caption=text, reply_markup=counter_inline_keyboard(0))

@@ -1,5 +1,6 @@
 from aiogram import Router, F
 from aiogram.types import Message,FSInputFile
+from buttons.buttons_uz import counter_inline_keyboard
 
 menu_2_router_uz = Router()
 
@@ -12,7 +13,7 @@ async def menu_cap_f_uz(m: Message):
         "Tanlang va uslubingizni to‘liq qiling! 👌"
     )
     photoo = FSInputFile("image/cap.jpg")
-    await m.answer_photo(photo=photoo ,caption=text)
+    await m.answer_photo(photo=photoo ,caption=text, reply_markup=counter_inline_keyboard(0))
 
 @menu_2_router_uz.message(F.text == "👕 Futbolka")
 async def menu_shirt_f_uz(m: Message):
@@ -23,7 +24,7 @@ async def menu_shirt_f_uz(m: Message):
         "O‘zingizga yoqqanini tanlang! 🛍️"
     )
     photoo = FSInputFile("image/T-shirt.jpg")
-    await m.answer_photo(photo=photoo ,caption=text)
+    await m.answer_photo(photo=photoo ,caption=text, reply_markup=counter_inline_keyboard(0))
 
 @menu_2_router_uz.message(F.text == "🧥 Kurtka")
 async def menu_jacket_f_uz(m: Message):
@@ -34,7 +35,7 @@ async def menu_jacket_f_uz(m: Message):
         "Eng so‘nggi kolleksiyamizni ko‘rib chiqing 👇"
     )
     photoo = FSInputFile("image/jacket.jpg")
-    await m.answer_photo(photo=photoo ,caption=text)
+    await m.answer_photo(photo=photoo ,caption=text, reply_markup=counter_inline_keyboard(0))
 
 @menu_2_router_uz.message(F.text == "🤵 Kostyum")
 async def menu_suit_f_uz(m: Message):
@@ -45,7 +46,7 @@ async def menu_suit_f_uz(m: Message):
         "Sizni haqiqiy gentlemanga aylantiradi ✨"
     )
     photoo = FSInputFile("image/suit.jpg")
-    await m.answer_photo(photo=photoo ,caption=text)
+    await m.answer_photo(photo=photoo ,caption=text, reply_markup=counter_inline_keyboard(0))
 
 @menu_2_router_uz.message(F.text == "👖 Shim")
 async def menu_trousers_f_uz(m: Message):
@@ -56,7 +57,7 @@ async def menu_trousers_f_uz(m: Message):
         "Qulaylik va stil bir joyda!"
     )
     photoo = FSInputFile("image/trousers.jpg")
-    await m.answer_photo(photo=photoo ,caption=text)
+    await m.answer_photo(photo=photoo ,caption=text, reply_markup=counter_inline_keyboard(0))
 
 @menu_2_router_uz.message(F.text == "👟 Oyoq kiyim")
 async def menu_shoes_f_uz(m: Message):
@@ -67,7 +68,7 @@ async def menu_shoes_f_uz(m: Message):
         "Yangi juftlik bilan yurishingizga ishonch qo‘shing 🚶‍♂️"
     )
     photoo = FSInputFile("image/shoes.jpg")
-    await m.answer_photo(photo=photoo ,caption=text)
+    await m.answer_photo(photo=photoo ,caption=text, reply_markup=counter_inline_keyboard(0))
 
 @menu_2_router_uz.message(F.text == "👜 Sumkalar")
 async def menu_bags_f_uz(m: Message):
@@ -78,7 +79,7 @@ async def menu_bags_f_uz(m: Message):
         "Stil va funksionallikni birlashtiring 💼"
     )
     photoo = FSInputFile("image/bags.jpg")
-    await m.answer_photo(photo=photoo ,caption=text)
+    await m.answer_photo(photo=photoo ,caption=text, reply_markup=counter_inline_keyboard(0))
 
 @menu_2_router_uz.message(F.text == "👓 Aksessuarlar")
 async def menu_accessories_f_uz(m: Message):
@@ -89,4 +90,4 @@ async def menu_accessories_f_uz(m: Message):
         "Kichik detallar — katta ta’sir yaratadi 💎"
     )
     photoo = FSInputFile("image/accessories.jpg")
-    await m.answer_photo(photo=photoo ,caption=text)
+    await m.answer_photo(photo=photoo ,caption=text, reply_markup=counter_inline_keyboard(0))
