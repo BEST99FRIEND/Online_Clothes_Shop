@@ -7,8 +7,6 @@ from aiogram.fsm.context import FSMContext
 from environs import Env
 import asyncio
 import logging
-from handlers import ( start_router, start_router_uz,
-                       start_router_ru, start_router_en )
 from routers import setup_routers
 
 import os
@@ -18,7 +16,8 @@ bot_token = os.getenv("TOKEN")
 
 async def main():
     bot = Bot(token=bot_token)
-    dp.include_router(setup_routers())
+    main_router = setup_routers()
+    dp.include_router(main_router)
     await dp.start_polling(bot)
 
 if __name__ == "__main__":

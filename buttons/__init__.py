@@ -1,4 +1,3 @@
-from .buttons_uz import *
-from .buttons_ru import *
-from .buttons_en import *
+from .admin_buttons import *
+from .user_buttons import *
 from .language_button import *

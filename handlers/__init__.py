@@ -1,4 +1,3 @@
 from .start import *
-from .handlers_uz import *
-from .handlers_ru import *
-from .handlers_en import *
+from .admin_handlers import *
+from .user_handlers import *
